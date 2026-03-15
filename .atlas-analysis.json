@@ -1,0 +1,243 @@
+{
+  "projectType": "data-platform",
+  "projectName": "PostgreSQL",
+  "projectDescription": "PostgreSQL is an advanced open-source object-relational database management system that supports an extended subset of the SQL standard, including transactions, foreign keys, subqueries, triggers, user-defined types and functions.",
+  "theme": "linden",
+  "primaryColor": "#355a7d",
+  "lightColor": "#94b5c4",
+  "darkColor": "#dae1e4",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": ["introduction", "getting-started/what-is-postgresql", "getting-started/history"]
+          },
+          {
+            "group": "Installation",
+            "pages": [
+              "getting-started/installation",
+              "getting-started/installation-from-source",
+              "getting-started/server-setup"
+            ]
+          },
+          {
+            "group": "Quickstart",
+            "pages": [
+              "getting-started/quickstart",
+              "getting-started/tutorial-sql",
+              "getting-started/tutorial-advanced"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SQL Language",
+        "groups": [
+          {
+            "group": "Fundamentals",
+            "pages": [
+              "sql/syntax",
+              "sql/data-definition",
+              "sql/data-manipulation",
+              "sql/queries"
+            ]
+          },
+          {
+            "group": "Data Types",
+            "pages": [
+              "sql/data-types",
+              "sql/arrays",
+              "sql/json",
+              "sql/range-types",
+              "sql/composite-types"
+            ]
+          },
+          {
+            "group": "Advanced SQL",
+            "pages": [
+              "sql/functions-operators",
+              "sql/type-conversion",
+              "sql/indexes",
+              "sql/full-text-search",
+              "sql/mvcc",
+              "sql/parallel-query"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Administration",
+        "groups": [
+          {
+            "group": "Server Administration",
+            "pages": [
+              "admin/server-setup",
+              "admin/runtime-config",
+              "admin/client-authentication",
+              "admin/user-management",
+              "admin/database-management"
+            ]
+          },
+          {
+            "group": "Performance & Monitoring",
+            "pages": [
+              "admin/monitoring",
+              "admin/performance-tips",
+              "admin/parallel-query",
+              "admin/jit"
+            ]
+          },
+          {
+            "group": "Backup & Recovery",
+            "pages": [
+              "admin/backup-restore",
+              "admin/high-availability",
+              "admin/logical-replication",
+              "admin/wal"
+            ]
+          },
+          {
+            "group": "Maintenance",
+            "pages": [
+              "admin/maintenance",
+              "admin/storage",
+              "admin/upgrade"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developer Guide",
+        "groups": [
+          {
+            "group": "Extending PostgreSQL",
+            "pages": [
+              "developer/extending",
+              "developer/triggers",
+              "developer/event-triggers",
+              "developer/rules",
+              "developer/procedural-languages"
+            ]
+          },
+          {
+            "group": "Procedural Languages",
+            "pages": [
+              "developer/plpgsql",
+              "developer/plpython",
+              "developer/plperl",
+              "developer/pltcl"
+            ]
+          },
+          {
+            "group": "Server Programming",
+            "pages": [
+              "developer/spi",
+              "developer/bgworker",
+              "developer/logical-decoding",
+              "developer/replication-origins"
+            ]
+          },
+          {
+            "group": "Client Interfaces",
+            "pages": [
+              "developer/libpq",
+              "developer/ecpg",
+              "developer/protocol"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reference",
+        "groups": [
+          {
+            "group": "SQL Commands",
+            "pages": [
+              "reference/sql-commands",
+              "reference/select",
+              "reference/insert",
+              "reference/update",
+              "reference/delete",
+              "reference/create-table",
+              "reference/create-index",
+              "reference/create-function",
+              "reference/grant",
+              "reference/transaction-commands"
+            ]
+          },
+          {
+            "group": "Client Tools",
+            "pages": [
+              "reference/psql",
+              "reference/pg-dump",
+              "reference/pg-restore",
+              "reference/pg-basebackup",
+              "reference/createdb",
+              "reference/createuser",
+              "reference/pg-upgrade"
+            ]
+          },
+          {
+            "group": "Server Tools",
+            "pages": [
+              "reference/initdb",
+              "reference/pg-ctl",
+              "reference/pg-config",
+              "reference/pg-waldump",
+              "reference/pg-resetwal"
+            ]
+          },
+          {
+            "group": "Extensions",
+            "pages": [
+              "reference/contrib-overview",
+              "reference/pg-stat-statements",
+              "reference/pg-trgm",
+              "reference/hstore",
+              "reference/pgcrypto",
+              "reference/postgres-fdw"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "ACID-compliant transactions with full MVCC (Multi-Version Concurrency Control)",
+    "Advanced indexing: B-tree, Hash, GiST, GIN, SP-GiST, BRIN, and Bloom indexes",
+    "Streaming and logical replication for high availability and read scaling",
+    "Extensible type system with user-defined types, operators, and aggregate functions",
+    "Rich procedural language support: PL/pgSQL, PL/Python, PL/Perl, PL/Tcl",
+    "Full-text search with language-aware stemming, ranking, and highlighting",
+    "Native JSON/JSONB support with powerful query operators",
+    "Foreign Data Wrappers (FDW) for querying external data sources",
+    "Row-level security and fine-grained access control",
+    "Partitioned tables and parallel query execution",
+    "Point-in-time recovery (PITR) and continuous archiving via WAL",
+    "Rich set of built-in contrib extensions (pg_stat_statements, pgcrypto, etc.)"
+  ],
+  "publicApiSurface": [
+    "SELECT / INSERT / UPDATE / DELETE / MERGE SQL statements",
+    "CREATE TABLE, ALTER TABLE, DROP TABLE DDL commands",
+    "CREATE INDEX (B-tree, GiST, GIN, BRIN, Hash, SP-GiST, Bloom)",
+    "CREATE FUNCTION / PROCEDURE with PL/pgSQL, PL/Python, PL/Perl, PL/Tcl",
+    "COPY — bulk data import/export",
+    "EXPLAIN / ANALYZE — query plan analysis",
+    "CREATE PUBLICATION / CREATE SUBSCRIPTION — logical replication",
+    "pg_dump / pg_restore — backup and restore utilities",
+    "psql — interactive terminal client",
+    "initdb / pg_ctl — server initialization and control",
+    "pg_basebackup — physical backup streaming",
+    "libpq C client library API",
+    "ECPG embedded SQL for C programs",
+    "SPI (Server Programming Interface) for C extensions",
+    "Background Worker API (bgworker)",
+    "Logical Decoding API",
+    "Foreign Data Wrapper (FDW) API",
+    "Table Access Method API",
+    "Index Access Method API"
+  ]
+}
